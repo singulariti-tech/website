@@ -17,6 +17,7 @@ params:
   navbarlogo:
   # Logo (from static/images/logos/___)
    image: logos/singulariti-logo-idots-clearspace-1200x300px.jpg
+   sizes: [30,120]
    link: /
   font:
     name: "Open Sans"
