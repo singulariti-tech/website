@@ -16,7 +16,7 @@ params:
   description: 
   navbarlogo:
   # Logo (from static/images/logos/___)
-   image: logos/singulariti-logo-idots-clearspace-1200x300px.jpg
+   image: logos/fresh.svg
    link: /
   font:
     name: "Open Sans"

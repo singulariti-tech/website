@@ -1,6 +1,6 @@
-baseURL: http://something-fresh.org/
+baseURL: https://singulariti.tech/
 languageCode: en-us
-title: Hugo Fresh Theme
+title: Man. Machine. Magic.
 theme: hugo-fresh
 googleAnalytics: #Put in your tracking code without quotes like this: UA-XXXXXX...
 #Disables warningss
@@ -16,16 +16,16 @@ params:
   description: 
   navbarlogo:
   # Logo (from static/images/logos/___)
-   image: logos/fresh.svg
+   image: logos/singulariti-logo-idots-clearspace-1200x300px.jpg
    link: /
   font:
     name: "Open Sans"
-    sizes: [400,600]
+    sizes: [300,1200]
   hero:
     # Main hero title
-    title: Manage. Deploy.
+    title: Man. Machine. Magic.
     # Hero subtitle (optional)
-    subtitle: Lorem ipsum sit dolor amet is dummy text used by the typography industry
+    subtitle: Let's say something here.
     # Button text
     buttontext: Get started
     # Where the main hero button links to
@@ -41,21 +41,7 @@ params:
     - gutwork
   # Customizable navbar. For a dropdown, add a "sublinks" list.
   navbar:
-  - title: Features
-    url: /
-  - title: Pricing
-    url: /
-  - title: Dropdown
-    sublinks:
-    - title: Dropdown item
-      url: /
-    - title: Dropdown item
-      url: /
-    - title: Dropdown item
-      url: /
-  - title: Log in
-    url: /
-  - title: Sign up
+  - title: Reach Us
     url: /
     button: true
   section1:
