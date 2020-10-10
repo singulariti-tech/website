@@ -1,22 +1,24 @@
 {{- $footer      := .Site.Params.footer }}
 {{- $logo        := index $footer "logo" }}
 {{- $quickLinks  := index $footer "quicklinks" }}
+{{- $addresses  := index $footer "addresses" }}
 {{- $socialMedia := index $footer "socialmedia" }}
 {{- $bulmaLogo   := index $footer "bulmalogo" }}
 {{- $socialMediaTitle    := index $footer "socialmediatitle" }}
 <footer class="footer footer-dark">
   <div class="container">
     <div class="columns">
-      <div class="column">
-        <div class="footer-logo">
-          <img src="{{ printf "/images/logos/%s" $logo | relURL }}">
-        </div>
-      </div>
-      {{- range $quickLinks }}
+      {{- range $addresses }}
         <div class="column">
           <div class="footer-column">
             <div class="footer-header">
-                <h3>{{ .title }}</h3>
+                <h3>{{ .location }}</h3>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                      <div>{{ .addressDescription }}</div>                   
+                      <div>{{ .phone }}</div>
+                  </div>
+                </nav>
             </div>
             <ul class="link-list">
               {{- range .links }}
@@ -29,29 +31,26 @@
             </ul>
           </div>
         </div>
-      {{- end }}
+      {{- end }}      
+    </div>
+    <div class="columns">
       <div class="column">
-        <div class="footer-column">
-          <div class="footer-header">
-            <h3>{{ $socialMediaTitle }}</h3>
-            <nav class="level is-mobile">
-              <div class="level-left">
-                {{- range $socialMedia }}
-                <a class="level-item" href="{{ .link }}">
-                  <span class="icon"><i class="fa fa-{{ .icon }}"></i></span>
-                </a>
-                {{- end }}
-              </div>
-            </nav>
-
-            {{- if $bulmaLogo }}
-            <a href="https://bulma.io" target="_blank">
-              <img src="{{ "/images/logos/made-with-bulma.png" | relURL }}" alt="Made with Bulma" width="128" height="24">
-            </a>
-            {{- end }}
-          </div>
+        <div>
+          <span class=""></span>{{ $socialMediaTitle }}</span>
+          <a  href="{{ $socialMedia.link }}">
+            <span class="icon"><i class="fa fa-{{ $socialMedia.icon }}"></i></span>
+          </a>
         </div>
+        {{- if $bulmaLogo }}
+        <a href="https://bulma.io" target="_blank">
+          <img src="{{ "/images/logos/made-with-bulma.png" | relURL }}" alt="Made with Bulma" width="128" height="24">
+        </a>
+        {{- end }}      
       </div>
     </div>
+    <div class="columns">
+      <div class="column is-size-7">&copy 2019 Singulariti Tech</div>
+    </div> 
   </div>
+  
 </footer>
